@@ -102,7 +102,7 @@ if year_diff == 0:
 
     # output section
     #=====================================
-    print("Total days between input dates: " + str(total_days_between_months))
+    print(f'Total days between input dates: {total_days_between_months}')
 
 elif year_diff > 0:
     #year gets changed. add all the years between start and end year mult by 12 and add to difference of months
