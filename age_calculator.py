@@ -79,7 +79,7 @@ if year_diff == 0:
 
 
     for i in range(start_month, end_month):
-        if i == 1 or i == 3 or i == 5 or i == 7 or i == 8 or i == 10 or i == 12:
+        if i in [1, 3, 5, 7, 8, 10, 12]:
             total_days += 31
 
             if(i == start_month):
@@ -94,7 +94,7 @@ if year_diff == 0:
 
             total_days += feb_days
 
-        elif i == 4 or i == 6 or i == 9 or i == 11:
+        elif i in [4, 6, 9, 11]:
             total_days += 30
 
 
@@ -110,7 +110,7 @@ elif year_diff > 0:
 
     #calculate the start year days
     for i in range(start_month, 12+1):
-        if i == 1 or i == 3 or i == 5 or i == 7 or i == 8 or i == 10 or i == 12:
+        if i in [1, 3, 5, 7, 8, 10, 12]:
             total_days += 31
 
         elif i == 2:
@@ -122,7 +122,7 @@ elif year_diff > 0:
 
             total_days += feb_days
 
-        elif i == 4 or i == 6 or i == 9 or i == 11:
+        elif i in [4, 6, 9, 11]:
             total_days += 30
 
 
@@ -143,7 +143,7 @@ elif year_diff > 0:
 
     # calculate the end year days
     for i in range(1, end_month):
-        if i == 1 or i == 3 or i == 5 or i == 7 or i == 8 or i == 10 or i == 12:
+        if i in [1, 3, 5, 7, 8, 10, 12]:
             total_days_full_months += 31
 
         elif i == 2:
@@ -155,7 +155,7 @@ elif year_diff > 0:
 
             total_days_full_months += feb_days
 
-        elif i == 4 or i == 6 or i == 9 or i == 11:
+        elif i in [4, 6, 9, 11]:
             total_days_full_months += 30
 
         elif i == 0:
@@ -173,9 +173,9 @@ elif year_diff > 0:
 
     # output section
     # =====================================
-    print("\n\nAge in days = " + str(total_days_between_dates))
-    print("Age in months = " + str(total_months))
-    print("Age in years = " + str(age_in_years) + " => (could vary depending on start inputs).")
+    print(f'\n\nAge in days = {total_days_between_dates}')
+    print(f'Age in months = {total_months}')
+    print(f'Age in years = {age_in_years} => (could vary depending on start inputs).')
 
     if start_date_choice == "n" or start_date_choice == "N":
         print("(Excluding the starting date)")
